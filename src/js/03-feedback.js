@@ -11,7 +11,7 @@ const userData = {};
 
 updateUserData();
 
-formRefs.form.addEventListener('input', onFormInput);
+formRefs.form.addEventListener('input', throttle(onFormInput, 500));
 formRefs.form.addEventListener('submit', onFormSubmit);
 
 function onFormInput(event) {

@@ -34,7 +34,7 @@ function onFormSubmit(event) {
 
 function updateUserData() {
     const data = localStorage.getItem(STORAGE_KEY);
-    const parseData = JSON.parse(data);
+    const parseData = JSON.parse(data) || '';
 
     const email = parseData.email;
     const message = parseData.message;
